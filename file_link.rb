@@ -37,7 +37,6 @@ module Jekyll
 
       if File.exist?(path)
         out = "[#{@basename}](#{@path})"
-        #out = "<a href='#{@path}'>#{@basename}</a>"
       else
         out = @basename
         warn "file_link plugin: File not found: `#{path}'"
