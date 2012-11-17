@@ -1,5 +1,21 @@
 module Jekyll
 
+  module PathCreator
+
+    # Creates a path relative to the site root directory.
+    #
+    # +page_dir+ - directory of the current page
+    # +path+ - path to a file (relative to page or absolute)
+    #
+    # Returns the path as string.
+    def self.create(page_dir, path)
+      is_relative = (path !~ /\A\//)
+      path_from_root = is_relative ? File.join(page_dir, path) : path
+
+      path_from_root.gsub(/\A\//, '')
+    end
+  end
+
   # A tag that generates a link (in markdown format) to a local file
   # with its basename as link text. When the file can not be found
   # the tag only generates the basename without a link.
@@ -21,19 +37,16 @@ module Jekyll
   # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
   class FileLinkTag < Liquid::Tag
 
-    def initialize(tag_name, text, tokens)
+    def initialize(tag_name, path, tokens)
       super
-      @path = text.strip
+      @path = path.strip
       @basename = File.basename(@path)
     end
 
     def render(context)
       page = context.environments.first['page']
       page_dir = File.dirname(page['url'])
-
-      # create path relative to site root
-      path = path_relative? ? File.join(page_dir, @path) : @path
-      path.gsub!(%r{\A/}, '')
+      path = PathCreator.create(page_dir, @path)
 
       if File.exist?(path)
         out = "[#{@basename}](#{@path})"
@@ -43,12 +56,6 @@ module Jekyll
       end
 
       out
-    end
-
-    private
-
-    def path_relative?
-      !(%r{\A/} =~ @path)
     end
   end
 end
