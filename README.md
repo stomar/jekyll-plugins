@@ -1,6 +1,8 @@
 Jekyll plugins
 ==============
 
+Plugins for the [Jekyll](http://jekyllrb.com/) static site generator.
+
 file_link tag
 -------------
 
@@ -10,8 +12,8 @@ the tag only generates the basename without a link.
 
 Usage:
 
-    {% file_link path/to/file %}  -> [file](path/to/file)
-    {% file_link /path/to/file %} -> [file](/path/to/file)
+- `{% file_link path/to/file %}` generates `[file](path/to/file)`
+- `{% file_link /path/to/file %}` generates `[file](/path/to/file)`
 
 The path can be given relative (to the current page)
 or absolute, with the Jekyll source directory as root.

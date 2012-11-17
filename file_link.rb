@@ -6,8 +6,8 @@ module Jekyll
   #
   # Usage:
   #
-  #     {% file_link path/to/file %}  -> [file](path/to/file)
-  #     {% file_link /path/to/file %} -> [file](/path/to/file)
+  #     {% file_link path/to/file %}  # => [file](path/to/file)
+  #     {% file_link /path/to/file %} # => [file](/path/to/file)
   #
   # The path can be given relative (to the current page)
   # or absolute, with the Jekyll source directory as root.
