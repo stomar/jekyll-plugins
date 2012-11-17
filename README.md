@@ -21,7 +21,8 @@ or absolute, with the Jekyll source directory as root.
 Installation
 ------------
 
-Copy the Ruby files (`*.rb`) into the `_plugins` directory.
+Copy the files in the `_plugins` directory into the `_plugins` directory
+of your site.
 
 License
 -------
