@@ -1,4 +1,3 @@
-#!/usr/bin/ruby -w
 # test_file_link.rb: Unit tests for the file_link tag.
 #
 # Copyright (C) 2012 Marcus Stollsteimer
