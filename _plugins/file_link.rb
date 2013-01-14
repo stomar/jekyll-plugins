@@ -17,7 +17,7 @@ module Jekyll
   end
 
   # A tag that generates a link (in markdown format) to a local file
-  # with its basename as link text. When the file can not be found
+  # with its basename as link text. When the file cannot be found
   # the tag only generates the basename without a link.
   #
   # Usage:
