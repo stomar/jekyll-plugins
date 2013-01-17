@@ -5,7 +5,7 @@
 require 'minitest/spec'
 require 'minitest/autorun'
 require 'liquid'
-require_relative '../_plugins/file_link'
+require 'file_link'
 
 
 describe Jekyll::PathCreator do
