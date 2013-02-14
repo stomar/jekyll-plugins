@@ -19,6 +19,33 @@ Usage:
 The path can be given relative (to the current page)
 or absolute, with the Jekyll source directory as root.
 
+localize filter
+---------------
+
+A filter that localizes relative links using the
+`lang` variable from the page's YAML front matter.
+It is assumed that all relative links are meant to be
+relative to language specific sub sites
+-- like <tt>/en/</tt>, <tt>/de/</tt>, ... --
+and returns the absolute link starting from the site root.
+
+Absolute links and URLs starting with `http://` or
+`https://` are not modified.
+
+Example (assuming '`lang: de`'):
+
+    {{ 'relative/link' | localize }}  # => '/de/relative/link'
+    {{ '/en/link'      | localize }}  # => '/en/link'
+    {{ 'http://site'   | localize }}  # => 'http://site'
+
+The site root '`/`' is also localized:
+
+    {{ '/' | localize }}  # => '/de/'
+
+When the `lang` variable is not set, `en` is used as default:
+
+    {{ 'relative/link' | localize }}  # => '/en/relative/link'
+
 Installation
 ------------
 
