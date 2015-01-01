@@ -1,6 +1,6 @@
 # test_localize.rb: Unit tests for the localize filter.
 #
-# Copyright (C) 2013-2014 Marcus Stollsteimer
+# Copyright (C) 2013-2015 Marcus Stollsteimer
 
 require 'minitest/autorun'
 require 'liquid'

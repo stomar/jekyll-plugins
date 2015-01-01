@@ -1,6 +1,6 @@
 # rakefile for the Jekyll plugins.
 #
-# Copyright (C) 2012-2014 Marcus Stollsteimer
+# Copyright (C) 2012-2015 Marcus Stollsteimer
 
 require 'rake/testtask'
 
