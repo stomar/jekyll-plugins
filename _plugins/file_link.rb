@@ -44,10 +44,19 @@ module Jekyll
       @basename = File.basename(@path)
     end
 
+    def page_dir(page)
+      url = page['url']
+
+      if url.end_with?('/')
+        url.chop
+      else
+        File.dirname(url)
+      end
+    end
+
     def render(context)
       page = context.environments.first['page']
-      page_dir = File.dirname(page['url'])
-      path = PathCreator.create(page_dir, @path)
+      path = PathCreator.create(page_dir(page), @path)
 
       if File.exist?(path)
         out = "[#{@basename}](#{@path})"
