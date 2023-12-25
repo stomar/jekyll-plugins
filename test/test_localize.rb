@@ -12,7 +12,7 @@ describe Jekyll::LocalizeFilter do
     @env_de  = [ { 'page' => {'lang' => 'de'} } ]
     @env_nil = [ { 'page' => {} } ]
 
-    @context = MiniTest::Mock.new
+    @context = Minitest::Mock.new
   end
 
   it 'localizes a relative link for given lang' do
