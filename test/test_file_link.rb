@@ -1,6 +1,4 @@
 # test_file_link.rb: Unit tests for the file_link tag.
-#
-# Copyright (C) 2012-2018 Marcus Stollsteimer
 
 require 'minitest/autorun'
 require 'liquid'
