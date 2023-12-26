@@ -11,10 +11,10 @@ module Jekyll
     #
     # Returns the path as string.
     def self.create(page_dir, path)
-      is_relative = (path !~ /\A\//)
+      is_relative = (path !~ %r{\A/})
       path_from_root = is_relative ? File.join(page_dir, path) : path
 
-      path_from_root.gsub(/\A\//, "")
+      path_from_root.gsub(%r{\A/}, "")
     end
   end
 
