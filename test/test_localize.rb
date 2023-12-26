@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # test_localize.rb: Unit tests for the localize filter.
 
 require "minitest/autorun"

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # test_file_link.rb: Unit tests for the file_link tag.
 
 require "minitest/autorun"
