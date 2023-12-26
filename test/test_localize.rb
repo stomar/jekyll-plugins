@@ -9,8 +9,8 @@ include Jekyll::LocalizeFilter
 describe Jekyll::LocalizeFilter do
 
   before do
-    @env_de  = [ { "page" => {"lang" => "de"} } ]
-    @env_nil = [ { "page" => {} } ]
+    @env_de  = [{ "page" => { "lang" => "de" } }]
+    @env_nil = [{ "page" => {} }]
 
     @context = Minitest::Mock.new
   end
