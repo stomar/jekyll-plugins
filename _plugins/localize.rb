@@ -34,11 +34,11 @@ module Jekyll
   module LocalizeFilter
 
     def localize(input)
-      page = @context.environments.first['page']
-      lang = page['lang'] || 'en'
+      page = @context.environments.first["page"]
+      lang = page["lang"] || "en"
 
       case input
-      when '/'
+      when "/"
         "/#{lang}/"
       when %r{\A/}, %r{\Ahttps?://}
         input

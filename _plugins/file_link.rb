@@ -12,7 +12,7 @@ module Jekyll
       is_relative = (path !~ /\A\//)
       path_from_root = is_relative ? File.join(page_dir, path) : path
 
-      path_from_root.gsub(/\A\//, '')
+      path_from_root.gsub(/\A\//, "")
     end
   end
 
@@ -45,9 +45,9 @@ module Jekyll
     end
 
     def page_dir(page)
-      url = page['url']
+      url = page["url"]
 
-      if url.end_with?('/')
+      if url.end_with?("/")
         url.chop
       else
         File.dirname(url)
@@ -55,7 +55,7 @@ module Jekyll
     end
 
     def render(context)
-      page = context.environments.first['page']
+      page = context.environments.first["page"]
       path = PathCreator.create(page_dir(page), @path)
 
       if File.exist?(path)
@@ -70,4 +70,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_tag('file_link', Jekyll::FileLinkTag)
+Liquid::Template.register_tag("file_link", Jekyll::FileLinkTag)
