@@ -6,9 +6,8 @@ require "minitest/autorun"
 require "liquid"
 require "localize"
 
-include Jekyll::LocalizeFilter
-
 describe Jekyll::LocalizeFilter do
+  include Jekyll::LocalizeFilter
 
   before do
     @env_de  = [{ "page" => { "lang" => "de" } }]
