@@ -2,6 +2,7 @@
 
 module Jekyll
 
+  # Helper module.
   module PathCreator
 
     # Creates a path relative to the site root directory.
