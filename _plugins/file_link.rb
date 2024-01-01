@@ -15,7 +15,7 @@ module Jekyll
       is_relative = (path !~ %r{\A/})
       path_from_root = is_relative ? File.join(page_dir, path) : path
 
-      path_from_root.gsub(%r{\A/}, "")
+      path_from_root.delete_prefix("/")
     end
   end
 
