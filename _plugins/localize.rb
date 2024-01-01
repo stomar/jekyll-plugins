@@ -30,7 +30,7 @@ module Jekyll
   #
   # Copy this file into the +_plugins+ directory.
   #
-  # Copyright (C) 2013-2018 Marcus Stollsteimer
+  # Copyright (C) 2013-2024 Marcus Stollsteimer
   #
   # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
   module LocalizeFilter
