@@ -12,7 +12,7 @@ module Jekyll
     #
     # Returns the path as string.
     def self.create(page_dir, path)
-      is_relative = (path !~ %r{\A/})
+      is_relative = !path.start_with?("/")
       path_from_root = is_relative ? File.join(page_dir, path) : path
 
       path_from_root.delete_prefix("/")
